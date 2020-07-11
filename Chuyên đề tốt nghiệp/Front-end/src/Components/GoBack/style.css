@@ -1,0 +1,24 @@
+.go-back {
+    color: black;
+    position: fixed;
+    left: 18px;
+    z-index: 100;
+    width: 44px;
+    height: 44px;
+    background-color: white;
+    border-radius: 100%;
+    top: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    animation: PULSEE 0.8s infinite;
+    display: flex;
+}
+
+html.active .go-back {
+    animation: PULSE 0.8s infinite;
+}
+
+.go-back i {
+    margin: auto;
+    font-size: 15px;
+}

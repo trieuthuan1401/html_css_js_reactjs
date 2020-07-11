@@ -1,0 +1,109 @@
+img.course_details_php_img {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+}
+
+a.course_details_php_link {
+    font-size: 16px;
+    color: #007bff !important;
+}
+
+.course_details_php_desc a {
+    color: #007bff !important;
+}
+
+li.list_course_details_item i {
+    color: #ff0000ad;
+    font-size: 13px;
+}
+
+a.list_course_details_link {
+    color: black !important;
+    font-size: 16px;
+}
+
+h3.vides.text-center {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.course_details_php_desc p {
+    color: black;
+}
+
+.list_course_details_item_phone i.fa.fa-phone {
+    width: 40px;
+    height: 40px;
+    background: #ff0000cc;
+    color: white;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+}
+
+.course_details_php_desc p {
+    line-height: 20px;
+    margin-bottom: 10px;
+}
+
+
+
+li.course_details_php_videos_item {
+    margin-bottom: 7px;
+}
+
+.container.list_course_all {
+    padding: 20px;
+    font-family: segoe ui light;
+    margin-top: 25px;
+}
+
+li.course_details_teacher_php_name {
+    /* margin-left: 20px; */
+    list-style: none;
+}
+
+ul.course_details_teacher_php {
+    display: flex;
+    padding: 0;
+}
+
+
+
+.course_details_teacher_php_name img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    float: left;
+}
+
+ul.list_course_details_list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.list_course_details_item_phone {
+    margin-top: 11px;
+    cursor: pointer;
+}
+
+.list_course_details_item_phone span {
+    height: 40px;
+    line-height: 40px;
+    margin-left: 6px;
+    font-size: 20px;
+    color: var(--cam);
+    font-weight: bold;
+}
+
+.list_course_details h3 {
+    font-size: 24px;
+}
+
+.badge.badge-success {
+    margin-left: 5px;
+}

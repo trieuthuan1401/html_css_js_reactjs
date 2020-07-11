@@ -1,0 +1,27 @@
+directive @hasRole(role: String) on FIELD | FIELD_DEFINITION
+
+scalar sca
+
+type CourseContent{
+    _id: String!
+    name: String!
+    description: String!
+    contentLink: String!
+}
+
+input CourseContentInput{
+    name: String!
+    description: String!
+    contentLink: String!
+}
+
+type Query{
+    courseContents: [CourseContent]
+} 
+
+type Mutation{
+    createCourseContent(input: CourseContentInput): CourseContent
+    updateCourseContent(id: String!, input: CourseContentInput): Boolean
+    deleteCourseContent(id: String!): Boolean @hasRole(role: "admin")
+    deleteCourseContents: Boolean @hasRole(role: "admin")
+}

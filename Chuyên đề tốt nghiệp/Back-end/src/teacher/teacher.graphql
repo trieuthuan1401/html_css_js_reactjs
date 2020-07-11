@@ -1,0 +1,25 @@
+directive @hasRole(role: String) on FIELD | FIELD_DEFINITION
+
+type Teacher {
+    _id: String!
+    name: String!
+    image: String!
+    position: String!
+}
+
+input TeacherInput {
+    name: String!
+    image: String!
+    position: String!
+}
+
+type Query {
+    teachers: [Teacher!]
+}
+
+type Mutation {
+    createTeacher(input: TeacherInput!): Teacher
+    deleteTeacher(id: String!): Boolean
+    updateTeacher(id: String!, input: TeacherInput!): Boolean
+    deletesTeacher: Boolean
+}

@@ -1,0 +1,28 @@
+directive @hasRole(role: String) on FIELD | FIELD_DEFINITION
+
+type CodeFree {
+    _id: String!
+    name: String!
+    description: String!
+    date: String!
+    image:String!
+}
+
+input CodeFreeInput {
+    name: String!
+    description: String!
+    date: String!
+    image:String!
+}
+
+type Query {
+  hello: String!
+  codeFrees: [CodeFree!]
+}
+
+type Mutation {
+  createCodeFree(input: CodeFreeInput!): CodeFree
+  deleteCodeFree(id: String!): Boolean
+  updateCodeFree(id: String!, input: CodeFreeInput!): Boolean
+  deletesCodeFree: Boolean
+}

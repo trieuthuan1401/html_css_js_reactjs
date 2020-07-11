@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Cabin|Herr+Von+Muellerhoff|Source+Sans+Pro:400,900&display=swap');
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a.close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #000;
+    color: #fff;
+    height: 44px;
+    line-height: 44px;
+    font-size: 18px;
+    text-align: right;
+    width: 20px;
+    cursor: pointer;
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s;
+}
+
+input[type="text"] {
+    width: 100%;
+    height: 44px;
+    background: transparent;
+    color: #fff;
+    border: none;
+    outline: none;
+}
+.search-form input::placeholder{
+    color: white;
+    font-weight: var(--font1);
+}
+.search-form {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(0%);
+    width: 600px;
+    height: 44px;
+    opacity: 1;
+    transition: all .5s;
+    opacity: 0;
+    visibility: hidden;
+}
+.search-form.active{
+    opacity: 1;
+    visibility:visible;
+    transition-delay: .5s;
+    transform: translateX(-50%);
+}
+.search-form::before{
+    content: '\f002';
+    position: absolute;
+    top: 0ppx;
+    left: -26px;
+    font-size: 18px;
+    color: #fff;
+    font-family: fontAwesome;
+}
+
+i.fa {
+    color: white;
+}
+
+a.nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-family: var(--font1);
+    transition: .3s;
+    font-weight: 400;
+}
+
+a.nav-link:hover {
+    color: #ffffffba;
+}
+
+ul.nav-list {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu {
+    width: 980px;
+    margin: 0 auto;
+    position: relative;
+}
+
+header {
+    width: 100%;
+    background: #000;
+    height: 44px;
+    line-height: 44px;
+    position: fixed;
+}
+:root{
+    --vang:#ffa900;
+    --cam:#dc5b21;
+    --do:#de1b1b;
+    --daquang:#66bbff;
+    --xanhdua:#99cd4e;
+    --main-font: 'Source Sans Pro', sans-serif;
+    --font4: 'Herr Von Muellerhoff', cursive;
+    --font3: 'Dancing Script', cursive;
+    --font2:'Kaushan Script', cursive;
+    --font1:'segoe ui light';
+}
+a.nav-link{
+    transform: scale(1);
+    transition: all .4s;
+    display: inline-block;
+    font-weight: bold;
+}
+a.nav-link.hide-item{
+    transform: scale(0);
+}
+.menu ul li:nth-child(2) a.nav-link.hide-item{
+    transition-delay: .6s;
+}
+.menu ul li:nth-child(3) a.nav-link.hide-item{
+    transition-delay: .5s;
+}
+.menu ul li:nth-child(4) a.nav-link.hide-item{
+    transition-delay: .4s;
+}
+.menu ul li:nth-child(5) a.nav-link.hide-item{
+    transition-delay: .3s;
+}
+.menu ul li:nth-child(6) a.nav-link.hide-item{
+    transition-delay: .2s;
+}
+.menu ul li:nth-child(7) a.nav-link.hide-item{
+    transition-delay: .1s;
+}
+.menu ul li:nth-child(8) a.nav-link.hide-item{
+    transition-delay: 0.09s;
+}
+
+.menu ul li:nth-child(2) a.nav-link{
+    transition-delay: 0s;
+}
+.menu ul li:nth-child(3) a.nav-link{
+    transition-delay: .1s;
+}
+.menu ul li:nth-child(4) a.nav-link{
+    transition-delay: .2s;
+}
+.menu ul li:nth-child(5) a.nav-link{
+    transition-delay: .3s;
+}
+.menu ul li:nth-child(6) a.nav-link{
+    transition-delay: .4s;
+}
+.menu ul li:nth-child(7) a.nav-link{
+    transition-delay: .5s;
+}
+.menu ul li:nth-child(8) a.nav-link{
+    transition-delay: .6s;
+}
+.close.active{
+    opacity: 1;
+    visibility: visible;
+}
+.background{
+    background-image: url("images/imagess.jpg");
+    background-size:cover ;
+    background-position: center;
+    height: 100vh;
+}

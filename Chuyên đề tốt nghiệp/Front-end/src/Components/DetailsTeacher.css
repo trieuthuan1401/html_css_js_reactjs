@@ -1,0 +1,453 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Cabin|Herr+Von+Muellerhoff|Source+Sans+Pro:400,900&display=swap');
+
+
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.timeline h1 {
+    color: black;
+    font-family: var(--font6);
+    font-size: 33px;
+}
+
+p.name-teacher {
+    font-size: 16px;
+    text-align: left;
+    font-family: var(--font6);
+}
+
+html.active p.name-teacher {
+    color: white;
+}
+
+html.active .timeline h1 {
+    color: white;
+}
+
+
+.social-media li {
+    margin: 0 20px;
+    font-family: var(--font3);
+    font-size: 30px;
+    padding: 10px;
+}
+
+ul.nav-list {
+    list-style: none;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+:root {
+    --vang: #ffa900;
+    --cam: #dc5b21;
+    --do: #de1b1b;
+    --xanhdua: #99cd4e;
+    --main-font: 'Source Sans Pro', sans-serif;
+    --font4: 'Herr Von Muellerhoff', cursive;
+    --font3: 'Dancing Script', cursive;
+    --font2: 'Kaushan Script', cursive;
+    --font1: 'segoe ui light';
+}
+
+
+a {
+    text-decoration: none;
+    color: #eee;
+}
+
+
+html.active .timeline p {
+    font-size: 18px;
+    font-weight: 300;
+    color: white;
+}
+
+.timeline p {
+    color: black;
+}
+
+
+
+
+/* html.active .about p {
+    font-size: 16px;
+    text-align: left;
+    font-family: var(--font6);
+    color: white;
+} */
+
+.about p {
+    color: black;
+}
+
+
+img {
+    max-width: 100%;
+}
+
+.sign img {
+    width: 400px;
+    object-fit: contain;
+    height: 170px;
+}
+
+
+.about .containerr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.about-heading {
+    text-align: center;
+    text-transform: uppercase;
+    color: black;
+    line-height: 0;
+    transform: translateY(50px);
+}
+
+html.active .about-heading {
+    color: white;
+}
+
+
+
+html.active .about-heading h1 {
+    font-size: 100px;
+    color: white;
+    opacity: .3;
+    font-family: var(--font3);
+    letter-spacing: 20px;
+    font-size: 38px;
+}
+
+.about-heading h1 {
+    color: black;
+}
+
+
+
+.about-heading h6 {
+    font-size: 24px;
+    font-family: var(--font2);
+    color: orange;
+    font-weight: bold;
+    letter-spacing: 7px;
+    transform: translateY(-81px);
+}
+
+.profile-img {
+    flex: 1;
+    margin-right: 50px;
+}
+
+.about-details {
+    flex: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.about-details h2 {
+    color: black;
+    font-family: var(--font6);
+    font-weight: 100;
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+html.active .about-details h2 {
+    color: white;
+}
+
+.about-details h3 {
+    color: black;
+    font-family: var(--font6);
+    margin-bottom: 5px;
+    font-weight: 100;
+    font-size: 27px;
+}
+
+html.active .about-details h3 {
+    color: white;
+
+}
+
+
+.about-heading h1 {
+    color: black;
+    opacity: .6;
+    font-family: var(--font5);
+    letter-spacing: 21px;
+    font-size: 100px;
+    font-weight: bold;
+    margin: 0;
+}
+
+html.active .about-heading h1 {
+    color: white;
+    font-family: var(--font5);
+    letter-spacing: 21px;
+    font-size: 100px;
+    font-weight: bold;
+    margin: 0;
+}
+
+
+
+.containerr {
+    width: 90%;
+    max-width: 120rem;
+    height: 100%;
+    position: relative;
+    margin: 0 auto;
+}
+
+.section-heading {
+    text-align: center;
+}
+
+.section-heading h1 {
+    font-size: 45px;
+    text-transform: uppercase;
+    color: black;
+    font-family: var(--font6);
+    margin-bottom: 10px;
+}
+
+html.active .section-heading h1 {
+    color: white;
+}
+
+.timeline {
+    margin-top: 22px;
+}
+
+section {
+    padding: 60px;
+}
+
+
+.timeline ul {
+    border-left: 4px solid #ffe838;
+    border-radius: 8px;
+    background-color: rgba(204, 190, 190, 0.05);
+    padding: 50px;
+    position: relative;
+    list-style: none;
+    width: 70%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.timeline .date {
+    border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.timeline .date:last-of-type {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border: initial;
+}
+
+.timeline .date::before,
+.timeline .date::after {
+    position: absolute;
+    display: block;
+    top: 50%;
+    transform: translateY(-50%);
+    color: black;
+    font-size: 20px;
+}
+
+html.active .timeline .date::before,
+html.active .timeline .date::after {
+    position: absolute;
+    display: block;
+    top: 50%;
+    transform: translateY(-50%);
+    color: white;
+    font-size: 20px;
+}
+
+
+
+.timeline .date::before {
+    content: attr(data-date);
+    left: -210px;
+    font-size: 20px;
+    min-width: 120px;
+    font-family: var(--font6);
+}
+
+.timeline .date::after {
+    content: '';
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+    background-color: #313534;
+    box-shadow: 0 0 0 4px #fd57fb;
+    left: -60px;
+}
+
+
+
+@media screen and (max-width:768px) {
+    * {}
+
+    html.active section {
+        background-color: #151935;
+    }
+
+    .about-heading h1 {
+        transform: translateY(-30px);
+    }
+
+    .about-details h2 {
+        font-size: 19px;
+    }
+
+    .about-details h3 {
+        font-size: 20px;
+    }
+
+    html.active .about-heading h1 {
+        font-size: 60px;
+        transform: translateY(-30px);
+    }
+
+    .top.float-right {
+        right: 35px;
+    }
+
+    .timeline {
+        transform: translateX(78px);
+    }
+
+
+    .landing-text h1 {
+        font-size: 90px;
+    }
+
+    ul.nav-list {
+        flex-direction: column;
+        overflow-y: hidden;
+    }
+
+    li {
+        margin: -10px 0;
+    }
+
+    .nav-link {
+        font-size: 35px;
+    }
+
+    .about-heading h1 {
+        font-size: 60px;
+    }
+
+    .about-heading h6 {
+        font-size: 20px;
+    }
+
+    .section-heading h1 {
+        font-size: 34px;
+    }
+
+    .about-details .nav-list {
+        flex-direction: row;
+    }
+
+    .about-details li {
+        margin: 0;
+    }
+
+    q .section-heading h6 {
+        font-size: 34px;
+    }
+
+    .section-heading h6 {
+        font-size: 27px;
+        margin: 15px 0px;
+    }
+
+    .timeline ul {
+        margin: 0 0 0 8px;
+    }
+
+    .timeline .date::before {
+        left: -180px;
+        font-size: 17px;
+    }
+
+    .timeline .date::after {
+        left: -59px;
+    }
+
+    .portfolio-description h6 {
+        font-size: 25px;
+        text-transform: uppercase;
+        margin: 2px 0;
+    }
+}
+
+@media screen and (max-width:600px) {
+
+    .about .containerr {
+        flex-direction: column;
+    }
+
+    .profile-img {
+        margin: 0 0 40px 0;
+        width: 310px;
+    }
+
+    .portfolio-item {
+        flex-direction: column;
+    }
+
+    .portfolio-item img {
+        margin: 0 0 20px 0;
+    }
+
+    .portfolio-description {
+        margin: 0;
+        order: 2;
+    }
+
+    .timeline h1 {
+        font-size: 20px;
+    }
+
+    li.date p {
+        font-size: 15px;
+        width: 150%;
+    }
+
+    .menu-left ul li {
+        padding: 15px 12px;
+    }
+}
+
+.profile-img img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
