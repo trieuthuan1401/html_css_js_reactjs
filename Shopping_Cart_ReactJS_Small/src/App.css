@@ -1,0 +1,44 @@
+* {
+  font-family: segoe ui light;
+  font-weight: bold;
+}
+
+.App {
+  text-align: center;
+}
+
+img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.product_list {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+  width: 1240px;
+  margin: 0 auto;
+  padding: 0 15px;
+  flex-wrap: wrap;
+}
+
+.product_item {
+  width: 300px;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  outline: none;
+  background: #ffa9006e;
+  border-radius: 25px;
+  cursor: pointer;
+  text-align: center;
+}
+
+button.cart {
+  border-radius: 0;
+  margin-top: 10px;
+  background-color: #0092ff94;
+}
