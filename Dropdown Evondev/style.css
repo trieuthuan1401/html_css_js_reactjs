@@ -1,0 +1,108 @@
+* {
+    font-family: segoe ui light;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+    background-color: #1a1c28;
+    color: #fff;
+}
+
+:root {
+    --primary: #DE4B3E;
+    --secondary: #C74237;
+}
+
+.dropdown {
+    width: 100%;
+    max-width: 47.5rem;
+    margin: 5rem auto;
+    position: relative;
+}
+
+
+
+.dropdown__select {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem;
+    background-color: var(--primary);
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.dropdown__list {
+    margin-top: 2.5rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    display: none;
+}
+
+.dropdown:hover .dropdown__list {
+    display: block;
+}
+
+.dropdown__list:before {
+    content: '';
+    height: 2.5rem;
+    width: 100%;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateY(-100%);
+}
+
+
+.dropdown__item:first-child::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 3rem;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid var(--primary);
+    transform: translateY(-100%);
+    transition: border-color .2s linear;
+}
+
+
+
+.dropdown__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem;
+    background-color: var(--primary);
+    text-transform: uppercase;
+    font-size: 1.8rem;
+    cursor: pointer;
+    transition: background-color .2s linear;
+}
+
+.dropdown__item:first-child {
+    border-radius: 4px 4px 0 0;
+    position: relative;
+}
+
+.dropdown__item:first-child:hover::before {
+    border-bottom-color: var(--secondary);
+}
+
+.dropdown__item:last-child {
+    border-radius: 0 0 4px 4px;
+}
+
+.dropdown__item:hover {
+    background-color: var(--secondary);
+}
