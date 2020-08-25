@@ -1,0 +1,21 @@
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 0 !important;
+}
+
+.actions {
+    opacity: 0;
+    transition: all .2s;
+}
+
+tr:hover .actions {
+    opacity: 1;
+}
+
+tbody td a {
+    color: #222;
+
+    &:hover {
+        color: #222;
+    }
+}

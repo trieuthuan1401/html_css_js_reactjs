@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>FormCreate</title>
+  </head>
+  <body>
+    <div class="signup">
+      <h2 class="signup__heading">Create Account</h2>
+      <p class="signup__already">
+        Already have an account?
+        <a href="#" class="signup__link signup--underline">Sign in</a>
+      </p>
+      <form action="#" class="signup__form">
+        <div class="form__group">
+          <input type="email" class="form__input" placeholder="Email" />
+        </div>
+        <div class="form__group form-group--2">
+          <input type="text" class="form__input" placeholder="First name" />
+          <input type="text" class="form__input" placeholder="Last name" />
+        </div>
+        <div class="form__group">
+          <input type="password" class="form__input" placeholder="Password" />
+        </div>
+        <div class="form__group">
+          <button class="form__submit" type="submit">
+            <span class="form__submit--text">Sign Up</span>
+            <i class="fas fa-arrow-right form__submit--icon"></i>
+          </button>
+        </div>
+        <div class="form__tos">
+          <input type="checkbox" name="" id="tos" />
+          <label for="tos"
+            >I have read and agree to the
+            <a href="tos" class="signup__link">Terms of Service</a></label
+          >
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
