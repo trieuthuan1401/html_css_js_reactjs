@@ -4,9 +4,7 @@
       <div class="row title">
         <span>Employee Details</span>
         <div class="float-right">
-          <button class="btn btn-primary mb-3" @click="clickAdd">
-            Add New
-          </button>
+          <button class="btn btn-primary mb-3" @click="clickAdd">Add New</button>
         </div>
       </div>
     </div>
@@ -24,30 +22,18 @@
             </tr>
           </thead>
           <tbody>
-            <tr
-              v-for="(employee, index) in employeeList"
-              :key="employee.id"
-              :index="index"
-            >
+            <tr v-for="(employee, index) in employeeList" :key="employee.id" :index="index">
               <th scope="row">{{ index }}</th>
               <td>{{ employee.name }}</td>
               <td>{{ employee.address }}</td>
               <td>{{ employee.phone }}</td>
               <td class="th-actions">
-                <button
-                  class="btn btn-warning"
-                  type="button"
-                  @click="editClick(employee)"
-                >
-                  Edit
-                </button>
+                <button class="btn btn-warning" type="button" @click="editClick(employee)">Edit</button>
                 <button
                   class="btn btn-danger ml-2"
                   type="button"
                   @click="deleteEmployee(employee.id)"
-                >
-                  Delete
-                </button>
+                >Delete</button>
               </td>
             </tr>
           </tbody>
@@ -136,6 +122,7 @@ export default {
 
     editClick(employee) {
       this.employee = JSON.parse(JSON.stringify(employee));
+      // this.employee = employee;
       this.isEdit = true;
     },
 
@@ -144,8 +131,6 @@ export default {
         (employee) => employee.id !== id
       );
     },
-
-    
   },
 };
 </script>

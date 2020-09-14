@@ -2,12 +2,7 @@
   <div id="app">
     <div class="section">
       <div class="container">
-        <Todos
-          :todos="todos"
-          @addTodo="addTodo"
-          @onComplete="onComplete"
-          @onDelete="onDelete"
-        />
+        <Todos :todos="todos" @addTodo="addTodo" @onComplete="onComplete" @onDelete="onDelete" />
       </div>
     </div>
   </div>
@@ -66,7 +61,7 @@ export default {
   },
   methods: {
     addTodo(todo) {
-      this.todos.unshift(todo);
+      this.todos = [todo, ...this.todos];
     },
     onComplete(id) {
       this.todos = this.todos.map((todo) =>

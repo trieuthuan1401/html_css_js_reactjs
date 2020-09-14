@@ -8,14 +8,14 @@
       @keyup.enter="addTodo"
     />
     <ul class="todo__list">
-      <li class="todo__item" v-for="todo in todos" :key="todo.id">
-        <div class="todo-item-left">
+      <TodoItem class="todo__item" v-for="todo in todosFiltered" :key="todo.id" :todo="todo">
+        <!-- <div class="todo-item-left">
           <input type="checkbox" v-model="todo.completed" />
           <div
             v-if="!todo.editing"
             class="todo-item-label"
             @click="editTodo(todo)"
-            :class="{ completed: todo.completed }"  
+            :class="{ completed: todo.completed }"
           >{{ todo.title }}</div>
           <input
             class="todo-item-edit"
@@ -27,27 +27,93 @@
             v-else
           />
         </div>
-        <div class="remove-item" @click="removeTodo(todo.id)">&times;</div>
-      </li>
+        <div class="remove-item" @click="removeTodo(todo.id)">&times;</div>-->
+      </TodoItem>
+
+      <div class="extra-container">
+        <div>
+          <label>
+            <input type="checkbox" :checked="anyRemaining" @change="checkAllTodos" />Check All
+          </label>
+        </div>
+        <div>{{remaining}} items left</div>
+      </div>
+
+      <div class="extra-container">
+        <div>
+          <button
+            class="extraa extra"
+            :class="{ active: filter == 'all' }"
+            @click="filter = 'all'"
+          >All</button>
+          <button
+            class="extra"
+            :class="{ active: filter == 'active' }"
+            @click="filter = 'active'"
+          >Active</button>
+          <button
+            class="extra"
+            :class="{ active: filter == 'completed' }"
+            @click="filter = 'completed'"
+          >Completed</button>
+        </div>
+
+        <div>
+          <transition name="fade">
+            <button
+              class="extra"
+              v-if="showClearCompletedButton"
+              @click="clearCompleted"
+            >Clear Completed</button>
+          </transition>
+        </div>
+      </div>
     </ul>
   </div>
 </template>
 
 <script>
+import TodoItem from "./TodoItem";
 //?HÀM TRIM DÙNG ĐỂ CẮT KHOẢNG TRẮNG Ở ĐẦU VÀ Ở CUỐI
 import { v4 as uuidv4 } from "uuid";
 export default {
   name: "todoList",
+  components: {
+    TodoItem,
+  },
   data() {
     return {
       newTodo: "",
       beforeEditCache: "",
+      filter: "all",
       todos: [
-        { id: 1, title: "VueJS 1", completed: false, editing: false },
-        { id: 2, title: "VueJS 2", completed: false, editing: false },
-        { id: 3, title: "VueJS 3", completed: false, editing: false },
+        { id: uuidv4(), title: "VueJS 1", completed: false, editing: false },
+        { id: uuidv4(), title: "VueJS 2", completed: false, editing: false },
+        { id: uuidv4(), title: "VueJS 3", completed: false, editing: false },
       ],
     };
+  },
+
+  computed: {
+    remaining() {
+      return this.todos.filter((todo) => !todo.completed).length;
+    },
+    anyRemaining() {
+      return this.remaining === 0;
+    },
+    todosFiltered() {
+      if (this.filter === "all") {
+        return this.todos;
+      } else if (this.filter === "active") {
+        return this.todos.filter((todo) => !todo.completed);
+      } else if (this.filter === "completed") {
+        return this.todos.filter((todo) => todo.completed);
+      }
+      return this.todos;
+    },
+    showClearCompletedButton() {
+      return this.todos.filter((todo) => todo.completed).length > 0;
+    },
   },
   methods: {
     addTodo() {
@@ -79,9 +145,16 @@ export default {
       todo.title = this.beforeEditCache;
       todo.editing = false;
     },
+    checkAllTodos() {
+      this.todos.forEach((todo) => (todo.completed = event.target.checked));
+    },
+    clearCompleted() {
+      this.todos = this.todos.filter((todo) => !todo.completed);
+    },
   },
 };
 </script>
+
 
 <style lang="scss">
 .todo-input {
@@ -179,5 +252,16 @@ button {
 .fade-enter,
 .fade-leave-to {
   opacity: 0;
+}
+
+button.extra {
+  padding: 5px 20px;
+  margin-left: 6px;
+  border-radius: 9px;
+  border: 1px solid #eee;
+  text-align: center;
+}
+button.extraa {
+  margin-left: 0;
 }
 </style>
