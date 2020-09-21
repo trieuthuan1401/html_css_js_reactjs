@@ -3,11 +3,10 @@ import { useSelector } from 'react-redux'
 import Contact from './Contact';
 
 const Contacts = () => {
-    const contacts = useSelector(state => state.contacts)
+    const contacts = useSelector(state => state.contact.contacts)
     return (
         <div>
             <table className="table shadow">
-
                 <thead className='bg-primary text-white'>
                     <tr>
                         <th scope="col">
@@ -22,10 +21,8 @@ const Contacts = () => {
                         <th scope="col">Actions</th>
                     </tr>
                 </thead>
-
                 <tbody>
                     {
-
                         contacts.map(contact =>
                             <Contact
                                 key={contact.id}

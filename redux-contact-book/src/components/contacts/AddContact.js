@@ -1,19 +1,25 @@
 import React, { useState } from 'react'
 import { useDispatch } from 'react-redux'
-import { addContact } from '../../store'
+import { addContact } from '../../actions/contactAction'
 import { v4 as uuidv4 } from 'uuid';
-const AddContact = (props) => {
+import { useHistory } from 'react-router-dom'
+
+const AddContact = () => {
     const dispatch = useDispatch()
+    const history = useHistory();
+
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [phone, setPhone] = useState('')
 
-
     const createContact = e => {
         e.preventDefault()
+        if (!name || !phone || !email) return
         const newContact = { id: uuidv4(), name, phone, email }
+        // Gọi tới reducer trong store.
+        // dispatch({type:"Account_Contact",payload:newContact})
         dispatch(addContact(newContact))
-        props.history.push('/')
+        history.push('/')
     }
     return (
         <div className='card border-0 shadow'>
@@ -53,5 +59,4 @@ const AddContact = (props) => {
         </div>
     )
 }
-
 export default AddContact

@@ -1,51 +1,179 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,400&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="./style.css" />
-    <title>FormCreate</title>
-  </head>
-  <body>
-    <div class="signup">
-      <h2 class="signup__heading">Create Account</h2>
-      <p class="signup__already">
-        Already have an account?
-        <a href="#" class="signup__link signup--underline">Sign in</a>
-      </p>
-      <form action="#" class="signup__form">
-        <div class="form__group">
-          <input type="email" class="form__input" placeholder="Email" />
-        </div>
-        <div class="form__group form-group--2">
-          <input type="text" class="form__input" placeholder="First name" />
-          <input type="text" class="form__input" placeholder="Last name" />
-        </div>
-        <div class="form__group">
-          <input type="password" class="form__input" placeholder="Password" />
-        </div>
-        <div class="form__group">
-          <button class="form__submit" type="submit">
-            <span class="form__submit--text">Sign Up</span>
-            <i class="fas fa-arrow-right form__submit--icon"></i>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;1,400&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+  <title>FormCreate</title>
+</head>
+
+<body>
+  <div class="signup">
+    <h2 class="signup__heading">Create Account</h2>
+    <form action="#" class="signup__form">
+
+
+
+      <div class="form__group">
+        <label for="">Name</label>
+        <input type="text"" class=" form__input" />
+      </div>
+      <div class="form__group">
+        <label for="">User External Token</label>
+        <input type="text"" class=" form__input" />
+      </div>
+      <div class="form__group">
+        <label for=""> Select External Account Category Id</label>
+        <span class="dropdown form__input float-right">
+          <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+            Select Account Category
           </button>
+          <ul class="dropdown-menu">s
+            <li><a href="#">HTML</a></li>
+            <li><a href="#">CSS</a></li>
+            <li><a href="#">JavaScript</a></li>
+          </ul>
+        </span>
+      </div>
+      <div class="form__group">
+        <label for=""> Role</label>
+        <span class="dropdown form__input float-right">
+          <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+            User
+          </button>
+          <ul class="dropdown-menu">s
+            <li><a href="#">HTML</a></li>
+            <li><a href="#">CSS</a></li>
+            <li><a href="#">JavaScript</a></li>
+          </ul>
+        </span>
+      </div>
+      <button class="form__group custom">Add User</button>
+  </div>
+
+
+  <!-- <div class="flex-1">
+        <div class="form__group">
+          <label for="">Email</label>
+          <input type="email" class="form__input" />
         </div>
-        <div class="form__tos">
-          <input type="checkbox" name="" id="tos" />
-          <label for="tos"
-            >I have read and agree to the
-            <a href="tos" class="signup__link">Terms of Service</a></label
-          >
+        <div class="form__group">
+          <label for="">Password</label>
+          <input type="password" class="form__input" />
         </div>
-      </form>
-    </div>
-  </body>
+        <label for="">Fullname</label>
+
+        <div class="form__group form-group--2">
+          <input type="text" class="form__input" />
+          <input type="text" class="form__input" />
+        </div>
+        <div class="form__group">
+          <label for="birthdaytime">Birthday</label>
+          <input type="date" id="birthdaytime" name="birthdaytime" class="form__input" />
+        </div>
+
+
+        <div class="form__group">
+          <label for="">Gender</label>
+          <span class="dropdown form__input float-right">
+            <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              Choose Gender
+              <span class="caret float-right"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="#">Male</a></li>
+              <li><a href="#">Female</a></li>
+            </ul>
+          </span>
+        </div>
+      </div>
+
+      <div class="flex-2">
+
+
+        <div class="form__group">
+          <label for="birthdaytime">Provinces</label>
+          <span class="dropdown form__input float-right">
+            <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              Select Provinces
+              <span class="caret float-right"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="#">HTML</a></li>
+              <li><a href="#">CSS</a></li>
+              <li><a href="#">JavaScript</a></li>
+            </ul>
+          </span>
+        </div>
+        <div class=" form__group">
+          <label for="birthdaytime">Districts</label>
+          <span class="dropdown form__input float-right">
+            <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              Select Districs
+              <span class="caret float-right"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="#">HTML</a></li>
+              <li><a href="#">CSS</a></li>
+              <li><a href="#">JavaScript</a></li>
+            </ul>
+          </span>
+        </div>
+
+
+        <div class="form__group custom mt-2">
+          <label for="birthdaytime">Wards</label>
+          <span class="dropdown form__input float-right">
+            <button class="btn dropdown-toggle" type="button" data-toggle="dropdown">
+              Select Wards
+              <span class="caret float-right"></span>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a href="#">HTML</a></li>
+              <li><a href="#">CSS</a></li>
+              <li><a href="#">JavaScript</a></li>
+            </ul>
+          </span>
+        </div>
+        <div class="form__group">
+          <label for="birthdaytime">Street</label>
+          <input type="text" class="form__input" " />
+        </div>
+
+        <div class=" form__group custom">
+          <label>Phone:</label>
+          <div class="form__input custom">
+            <i class="fas fa-caret-down float-right"></i>
+          </div>
+        </div> -->
+  </form>
+  </div>
+
+  <!-- <button class="form__group customm">Next</button> -->
+
+
+
+
+
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+</body>
+
 </html>
