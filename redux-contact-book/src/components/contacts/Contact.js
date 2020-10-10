@@ -11,7 +11,6 @@ import { deleteContact } from '../../actions/contactAction'
 const Contact = ({ contact }) => {
     const { id, name, phone, email } = contact
     let dispatch = useDispatch()
-
     return (
         <tr key={id}>
             <td className="row" >

@@ -11,7 +11,7 @@ const Contacts = () => {
                     <tr>
                         <th scope="col">
                             <div className="custom-control custom-checkbox">
-                                <input type="checkbox" name="" id="" className='custom-control-input' />
+                                <input type="checkbox" className='custom-control-input' />
                                 <label className='custom-control-label'></label>
                             </div>
                         </th>
@@ -30,7 +30,6 @@ const Contacts = () => {
                             />
                         )
                     }
-
                 </tbody>
 
             </table>

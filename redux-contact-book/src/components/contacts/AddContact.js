@@ -5,12 +5,14 @@ import { v4 as uuidv4 } from 'uuid';
 import { useHistory } from 'react-router-dom'
 
 const AddContact = () => {
+
     const dispatch = useDispatch()
     const history = useHistory();
 
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
     const [phone, setPhone] = useState('')
+
 
     const createContact = e => {
         e.preventDefault()
@@ -21,6 +23,8 @@ const AddContact = () => {
         dispatch(addContact(newContact))
         history.push('/')
     }
+
+
     return (
         <div className='card border-0 shadow'>
             <div className="card-header">Add a Contact</div>
